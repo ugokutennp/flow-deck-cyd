@@ -1,8 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flow-deck-cyd Web Flasher</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .esp-button {
+            display: flex;
+            justify-content: center;
+        }
+        h1 {
+            color: #343a40;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .card-body {
+            text-align: center;
+        }
+    </style>
+</head>
 <body>
-    <h1>cyd_serial</h1>
-    <script type="module" src="https://unpkg.com/esp-web-tools@3.4.2/dist/web/install-button.js?module"></script>
-    <esp-web-install-button manifest="firmware/manifest.json"></esp-web-install-button>
+    <div class="container">
+        <div class="header">
+            <h1>flow-deck-cyd Web Flasher</h1>
+            <p class="lead">You can write firmware from the button below!</p>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <script type="module" src="https://unpkg.com/esp-web-tools@3.4.2/dist/web/install-button.js?module"></script>
+                <div class="esp-button">
+                    <esp-web-install-button manifest="firmware/manifest.json"></esp-web-install-button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
