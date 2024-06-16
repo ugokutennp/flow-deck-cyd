@@ -1,3 +1,3 @@
 # flow-deck-cyd
 WIP
-![thumbnail](primary/resources/booth1.png)
+![thumbnail](primary/resources/logo.png)
