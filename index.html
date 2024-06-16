@@ -15,6 +15,12 @@
         .header {
             text-align: center;
             margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header img {
+            margin-right: 10px;
         }
         .esp-button {
             display: flex;
@@ -22,6 +28,7 @@
         }
         h1 {
             color: #343a40;
+            display: inline;
         }
         .card {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -35,9 +42,10 @@
 <body>
     <div class="container">
         <div class="header">
+            <img src="primary/resources/icon.png" alt="Icon" width="80" height="80">
             <h1>flow-deck-cyd Web Flasher</h1>
-            <p class="lead">You can flash firmware from the button below!</p>
         </div>
+        <p class="lead text-center">You can flash firmware from the button below!</p>
         <div class="card">
             <div class="card-body">
                 <script type="module" src="https://unpkg.com/esp-web-tools@3.4.2/dist/web/install-button.js?module"></script>
