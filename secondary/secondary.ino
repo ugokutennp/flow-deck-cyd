@@ -109,12 +109,12 @@ void lv_label_log(const char * log) {
     lv_obj_set_width(label, 300);
     lv_label_set_recolor(label, true);
     lv_label_set_text(label, log);
-    lv_obj_set_style_translate_x(label, -10, 0);
+    lv_obj_set_style_translate_x(label, -8, 0);
     lv_obj_set_style_text_font(label, &noto_sansjp_medium_14_2bpp, 0);
 
     // Adjust the padding to reduce the vertical spacing
-    lv_obj_set_style_pad_top(label, -5, 0);    // Adjust top padding
-    lv_obj_set_style_pad_bottom(label, -5, 0); // Adjust bottom padding
+    lv_obj_set_style_pad_top(label, -1, 0);    // Adjust top padding
+    lv_obj_set_style_pad_bottom(label, -1, 0); // Adjust bottom padding
 
 
     // Move the reset button to the foreground
