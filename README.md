@@ -20,6 +20,3 @@ CYD stands for Cheap Yellow Display, a general term for modules featuring ESP32 
 - Resistive touch panel
 - Using XPT2046 and ST7789
 - Equipped with a USB-C port
-
-## 今後実装
-日本語対応…
