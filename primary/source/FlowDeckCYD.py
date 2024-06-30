@@ -44,6 +44,13 @@ def quit_app(icon, item):
     icon.stop()
     sys.exit()
 
+# Function to handle reconnecting the serial connection
+def reconnect_serial(icon, item):
+    global ser
+    if ser:
+        ser.close()
+    ser = initialize_serial_connection()
+
 # Signal handler for clean exit
 def signal_handler(sig, frame):
     quit_app(icon, None)
@@ -68,7 +75,10 @@ except Exception as e:
     draw = ImageDraw.Draw(image)
     draw.rectangle([0, 0, 64, 64], fill=(255, 255, 255))
 
-menu = Menu(MenuItem('Quit', quit_app))
+menu = Menu(
+    MenuItem('Reconnect', reconnect_serial),
+    MenuItem('Quit', quit_app)
+)
 icon = Icon(name='FlowDeckCYD', icon=image, title='FlowDeckCYD', menu=menu)
 
 # Function to run the icon in a separate thread
